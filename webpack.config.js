@@ -7,8 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    path: __dirname,
-    publicPath: 'dist'
+    contentBase: path.join(__dirname, 'dist')
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

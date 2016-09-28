@@ -9,6 +9,7 @@
   "description": "a test demo for leaflet api",
   "main": "index.js",
   "dependencies": {
+    "leaflet": "^1.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
@@ -22,7 +23,9 @@
     "webpack-dev-server": "^1.16.1"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "copy:static": "cp -r static/ dist",
+    "dev": "npm run copy:static && ./node_modules/.bin/webpack-dev-server --inline --hot"
   },
   "author": "Zhenyang Li (lizhenyang@madadata.com)",
   "license": "MIT"
