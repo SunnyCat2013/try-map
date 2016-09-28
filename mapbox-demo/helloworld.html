@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    .map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+	<body>
+			<div id='map-one' class='map'> </div>
+			<script>
+				L.mapbox.accessToken = 'pk.eyJ1IjoiY3NsenkiLCJhIjoiY2l0bW5keG50MDFxbjJ0cGNkbjV3NzU1NSJ9.2AaY21HwhJBstEo-HwY1DQ';
+			  const map = L.mapbox.map('map-one', 'mapbox.streets').setView([39.96, 116.3], 14);
+				map.on('click', e => {
+					L.popup()
+						.setLatLng(e.latlng)
+						.setContent("You clicked the map at: " + e.latlng)
+						.openOn(map)
+				});
+			</script>
+	</body>
+</html>
