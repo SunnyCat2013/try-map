@@ -1,10 +1,5 @@
 {
   "name": "leaflet-demo",
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "version": "1.0.0",
   "description": "a test demo for leaflet api",
   "main": "index.js",
