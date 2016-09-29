@@ -8,10 +8,6 @@ const DEFAULT_LONGITUDE = 116.45;
 class LeafletMap extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   map: null
-    // };
-    // let map = null;
     this.onMapClick = this.onMapClick.bind(this);
   }
   componentDidMount () {
@@ -19,7 +15,6 @@ class LeafletMap extends Component {
     // this.map = map;
     this.setState({ map: map });
     const baseTileLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png', {
-    // const baseTileLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{1}/{z}/{x}/{y}.png?access_token={accessToken}', {
       maxZoom: 15,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
     }).addTo(map);
@@ -39,23 +34,12 @@ class LeafletMap extends Component {
     polygon.bindPopup("I am a polygon.");
 
     map.on('click', this.onMapClick);
-    // map.on('click', (e) => {
-    //   // L.popup()
-    //   //   .setLatLng(e.latlng)
-    //   //   .setContent("<h1>you clicked the map at </h1>" + e.latlng.toString())
-    //   //   .openOn(map);
-    //   this.onMapClick(e);
-    // });
-    // map.fitWorld();
   }
   componentWillUnmount () {
       this.map.off('click', this.onMapClick);
       this.map = null;
   }
   onMapClick (e) {
-      // Do some wonderful map things...
-      // alert("You clicked the map at " + e.latlng);
-      console.log(this.map);
       L.popup()
         .setLatLng(e.latlng)
         .setContent("You clicked the map at: " + e.latlng.toString())
