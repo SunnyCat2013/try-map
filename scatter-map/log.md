@@ -18,3 +18,4 @@ bug: 地图是可以显示了，但是，用的仍然是全局变量。这样很
 
 provide module
 definition module
+自己封装leaflet-baidu。

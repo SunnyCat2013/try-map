@@ -1,4 +1,4 @@
-var data = [
+export const pm = [
      {name: '海门', value: 9},
      {name: '鄂尔多斯', value: 12},
      {name: '招远', value: 12},
