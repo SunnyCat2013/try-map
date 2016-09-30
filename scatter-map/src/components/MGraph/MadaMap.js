@@ -52,7 +52,10 @@ class MadaMap extends React.Component {
     // const pm = readTextFile(CITY_PM);
     // console.log(JSON.stringify(cityGeoJSON()));
     const geoJSON = cityGeoJSON();
-    L.geoJson(geoJSON).addTo(map);
+    L.geoJson(geoJSON).bindPopup((layer) => {
+      return layer.feature.properties.name;
+    })
+    .addTo(map);
     L.geoJson(myLines, {
       style: myStyle
     }).addTo(map);
