@@ -53,12 +53,12 @@ class MadaMap extends React.Component {
     // console.log(JSON.stringify(cityGeoJSON()));
     const geoJSON = cityGeoJSON();
     L.geoJson(geoJSON).bindPopup((layer) => {
-      return layer.feature.properties.name;
+      return layer.feature.properties.name +"<br/> PM:"+ layer.feature.properties.value;
     })
     .addTo(map);
-    L.geoJson(myLines, {
-      style: myStyle
-    }).addTo(map);
+    // L.geoJson(myLines, {
+    //   style: myStyle
+    // }).addTo(map);
 
   }
 
