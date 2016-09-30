@@ -18,6 +18,7 @@
   "author": "Zhenyang Li (lizhenyang@madadata.com)",
   "license": "MIT",
   "dependencies": {
+    "leaflet": "^1.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   }
